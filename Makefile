@@ -1,2 +1,2 @@
 make: tests.c vector.h
-	gcc -o tests tests.c -lcunit 
+	gcc -Wall -Werror -coverage -o tests tests.c -lcunit 

@@ -1,6 +1,12 @@
 # Built binaries
 tests
 
+# Code coverage
+*.c.gcov
+*.gcda
+*.gcno
+*.h.gcov
+
 # Prerequisites
 *.d
 

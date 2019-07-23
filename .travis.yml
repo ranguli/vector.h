@@ -20,4 +20,10 @@ before_install:
 
 script:
   - make
+  - ./tests
+  - gcov tests.c
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
 
