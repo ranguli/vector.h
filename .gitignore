@@ -1,5 +1,6 @@
 # Built binaries
 tests
+examples/triangle
 
 # Code coverage
 *.c.gcov

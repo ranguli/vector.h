@@ -1,2 +1,3 @@
 ignore:
   - "tests.c"  # We don't need to check the tests themselves for tests coverage 
+  - "examples/triangle.c"  # Codecov is for the library, not the examples we use to demo the library. 
