@@ -1,2 +1,2 @@
 ignore:
-  - "test.c"  # We don't need to check the tests themselves for tests coverage 
+  - "tests.c"  # We don't need to check the tests themselves for tests coverage 
