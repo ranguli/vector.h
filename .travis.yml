@@ -1,0 +1,23 @@
+language: c
+
+os:
+  - linux
+  - osx
+
+compiler:
+  - gcc
+  - clang
+
+addons:
+  apt:
+    packages:
+      - libcunit1
+      - libcunit1-dev 
+
+before_install:
+  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew update          ; fi
+  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew install cunit   ; fi
+
+script:
+  - make
+
