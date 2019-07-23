@@ -1,0 +1,105 @@
+\hypertarget{vector_8h}{}\section{vector.\+h File Reference}
+\label{vector_8h}\index{vector.\+h@{vector.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for vector.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{vector_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{vector_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structVec2}{Vec2}
+\item 
+struct \hyperlink{structVec3}{Vec3}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structVec2}{Vec2} \hyperlink{vector_8h_a77ab0fbf6576acf1533cb7963655f77c}{Vec2}
+\item 
+typedef struct \hyperlink{structVec3}{Vec3} \hyperlink{vector_8h_accf408e3e7c8f0da0653692466f81a54}{Vec3}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{vector_8h_a1e709f8cfb3f02dd75e205b0fb0e500e}{vec2\+\_\+swap\+\_\+points} (\hyperlink{structVec2}{Vec2} $\ast$vector)
+\item 
+int \hyperlink{vector_8h_a409d4800f56c90731ad9c70895b856ed}{vec2\+\_\+distance} (\hyperlink{structVec2}{Vec2} vector1, \hyperlink{structVec2}{Vec2} vector2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{vector_8h_a77ab0fbf6576acf1533cb7963655f77c}\label{vector_8h_a77ab0fbf6576acf1533cb7963655f77c}} 
+\index{vector.\+h@{vector.\+h}!Vec2@{Vec2}}
+\index{Vec2@{Vec2}!vector.\+h@{vector.\+h}}
+\subsubsection{\texorpdfstring{Vec2}{Vec2}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structVec2}{Vec2}  \hyperlink{structVec2}{Vec2}}
+
+Simple structure for a 2D vector 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & coordinate of the vector \\
+\hline
+\mbox{\tt in}  & {\em y} & coordinate of the vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8h_accf408e3e7c8f0da0653692466f81a54}\label{vector_8h_accf408e3e7c8f0da0653692466f81a54}} 
+\index{vector.\+h@{vector.\+h}!Vec3@{Vec3}}
+\index{Vec3@{Vec3}!vector.\+h@{vector.\+h}}
+\subsubsection{\texorpdfstring{Vec3}{Vec3}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structVec3}{Vec3}  \hyperlink{structVec3}{Vec3}}
+
+Simple structure for a 3D vector 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & coordinate of the vector \\
+\hline
+\mbox{\tt in}  & {\em y} & coordinate of the vector \\
+\hline
+\mbox{\tt in}  & {\em z} & coordinate of the vector \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{vector_8h_a409d4800f56c90731ad9c70895b856ed}\label{vector_8h_a409d4800f56c90731ad9c70895b856ed}} 
+\index{vector.\+h@{vector.\+h}!vec2\+\_\+distance@{vec2\+\_\+distance}}
+\index{vec2\+\_\+distance@{vec2\+\_\+distance}!vector.\+h@{vector.\+h}}
+\subsubsection{\texorpdfstring{vec2\+\_\+distance()}{vec2\_distance()}}
+{\footnotesize\ttfamily int vec2\+\_\+distance (\begin{DoxyParamCaption}\item[{\hyperlink{structVec2}{Vec2}}]{vector1,  }\item[{\hyperlink{structVec2}{Vec2}}]{vector2 }\end{DoxyParamCaption})}
+
+Gets the dsiatance between two 2D vectors 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \hyperlink{structVec2}{Vec2}} & vector1 \\
+\hline
+\mbox{\tt in}  & {\em \hyperlink{structVec2}{Vec2}} & vector2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double The distance between them. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{vector_8h_a1e709f8cfb3f02dd75e205b0fb0e500e}\label{vector_8h_a1e709f8cfb3f02dd75e205b0fb0e500e}} 
+\index{vector.\+h@{vector.\+h}!vec2\+\_\+swap\+\_\+points@{vec2\+\_\+swap\+\_\+points}}
+\index{vec2\+\_\+swap\+\_\+points@{vec2\+\_\+swap\+\_\+points}!vector.\+h@{vector.\+h}}
+\subsubsection{\texorpdfstring{vec2\+\_\+swap\+\_\+points()}{vec2\_swap\_points()}}
+{\footnotesize\ttfamily void vec2\+\_\+swap\+\_\+points (\begin{DoxyParamCaption}\item[{\hyperlink{structVec2}{Vec2} $\ast$}]{vector }\end{DoxyParamCaption})}
+
+Swaps the x and y values of a Vector 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \hyperlink{structVec2}{Vec2}} & Pointer to a vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}

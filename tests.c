@@ -6,7 +6,6 @@
 // Shout out to this internet stranger for a great CUnit tutorial:
 // https://wpollock.com/CPlus/CUnitNotes.htm
 
-
 /* Test suite setup and cleanup functions: */
 
 int init_suite(void) {
@@ -38,6 +37,39 @@ void vec2_test_swap(void) {
 
 }
 
+void vec2_test_distance1(void) {
+    float result;
+
+    Vec2 vector1 = {1, 2};
+    Vec2 vector2 = {1, 3};
+
+    // If the points are 1 unit away from each other, it should return 1.0 
+    result = vec2_distance(vector1, vector2);
+    CU_ASSERT(result == 1);
+
+}    
+
+void vec2_test_distance2(void) {
+    float result;
+
+    // If the points are the same, the distance should be 0  
+    Vec2 vector1 = {1, 1};
+    Vec2 vector2 = {1, 1};
+    
+    result = vec2_distance(vector1, vector2);
+    CU_ASSERT(result == 0);
+}
+
+void vec2_test_distance3(void) {
+    float result;
+    Vec2 vector1 = {2, 3};
+    Vec2 vector2 = {5, 7};
+    
+    result = vec2_distance(vector1, vector2);
+    CU_ASSERT(result == 5);
+
+}
+
 /* Test runner code goes here */
 
 int main (void) {
@@ -56,7 +88,10 @@ int main (void) {
 
    /* Add our tests to the suite */
    if ( (NULL == CU_add_test(pSuite, "vec2_test_points", vec2_test_points)) ||
-        (NULL == CU_add_test(pSuite, "vec2_test_swap", vec2_test_swap)) //||
+        (NULL == CU_add_test(pSuite, "vec2_test_swap", vec2_test_swap)) || 
+        (NULL == CU_add_test(pSuite, "vec2_test_distance1", vec2_test_distance1)) || 
+        (NULL == CU_add_test(pSuite, "vec2_test_distance2", vec2_test_distance2)) || 
+        (NULL == CU_add_test(pSuite, "vec2_test_distance3", vec2_test_distance3)) 
         //(NULL == CU_add_test(pSuite, "max_test_3", max_test_3))
       )
    {
