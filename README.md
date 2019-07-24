@@ -7,7 +7,7 @@ A toy single-header C library for vector math.
 After cloning the repository, simply run `make` to compile the test suite.
 
 ## Examples
-Here's a screenshot of a moving triangle in SDL. It uses the vector structures
+Here's a (choppy) gif of a moving triangle in SDL. It uses the vector structures
 and functions from `vector.h`
 
 ![triangle_example](examples/triangle_example.gif)
