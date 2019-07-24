@@ -89,7 +89,7 @@ int main(int argc, char* argv[]) {
     SDL_Window *window;
     SDL_Renderer* renderer = NULL;
     int posX = 100, posY = 100; 
-    window = SDL_CreateWindow("Hello World", posX, posY, SCREEN_HEIGHT,SCREEN_WIDTH,  0);
+    window = SDL_CreateWindow("Vector Example", posX, posY, SCREEN_HEIGHT,SCREEN_WIDTH,  0);
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
 
