@@ -37,5 +37,6 @@ void vec2_swap_points(Vec2 *vector) {
 */
 
 int vec2_distance(Vec2 vector1, Vec2 vector2) {
-    return (int)(sqrt(pow(vector2.x - vector1.x, 2) + pow(vector2.y - vector1.y, 2))) * 100.0 / 100);
+    double vector = (sqrt(pow(vector2.x - vector1.x, 2) + pow(vector2.y - vector1.y, 2))) * 100.0 / 100;
+    return vector;
 }
