@@ -5,7 +5,6 @@
  * @param [in] x coordinate of the vector
  * @param [in] y coordinate of the vector
  */
-
 typedef struct Vec2  {
     float x, y;
 } Vec2;
@@ -16,25 +15,18 @@ typedef struct Vec2  {
  * @param [in] z coordinate of the vector 
  */
 typedef struct Vec3  {
-    int x;
-    int y;
-    int z;
-
-} Vec4;
+    float x, y, z;
+} Vec3;
 
 /** 
  * Swaps the x and y values of a Vector
  * @param [in] Vec2 Pointer to a vector 
  * @return none  
 */
-
 void vec2_swap_points(Vec2 *vector) {
-    int temp;
-    
-    temp = vector->x;
+    int temp = vector->x;
     vector->x = vector->y;
     vector->y = temp;
-
 }
 
 /** 
@@ -45,8 +37,5 @@ void vec2_swap_points(Vec2 *vector) {
 */
 
 int vec2_distance(Vec2 vector1, Vec2 vector2) {
-    float distance;
-    distance = sqrt(pow(vector2.x - vector1.x, 2) + pow(vector2.y - vector1.y, 2));
-    distance = (distance * 100.0) / 100.0;
-    return (int)distance;
+    return (int)(sqrt(pow(vector2.x - vector1.x, 2) + pow(vector2.y - vector1.y, 2))) * 100.0 / 100);
 }

@@ -10,4 +10,4 @@ After cloning the repository, simply run `make` to compile the test suite.
 Here's a screenshot of a moving triangle in SDL. It uses the vector structures
 and functions from `vector.h`
 
-![triangle_example](examples/triangle_example_screenshot.png)
+![triangle_example](examples/triangle_example.gif)
