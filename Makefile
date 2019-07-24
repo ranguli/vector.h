@@ -7,4 +7,7 @@ make: tests.c vector.h
 examples: examples/triangle.c vector.h
 	$(CC) $(CFLAGS) -o examples/triangle examples/triangle.c $(CFLAGS) `sdl2-config --cflags --libs`
 
+line: examples/line.c vector.h
+	$(CC) $(CFLAGS) -o examples/line examples/line.c $(CFLAGS) `sdl2-config --cflags --libs`
+
 .PHONY: all test clean

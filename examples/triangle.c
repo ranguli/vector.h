@@ -35,15 +35,17 @@ typedef struct Triangle {
 
     int point_count; 
     int scale;
+    int angle;
     SDL_Point points[4];
     
 } Triangle;
 
-void update_triangle(Triangle *triangle, Vec2 center, int scale) {
+void update_triangle(Triangle *triangle, Vec2 center, int scale, int angle) {
     
     triangle->center = center;
     triangle->scale = scale; 
     triangle->point_count = 4; 
+    triangle->angle = angle;
    
     // This dynamically creates the vertices of the triangle 
     // from directives like the desired center (x,y) of the triangle
@@ -57,7 +59,15 @@ void update_triangle(Triangle *triangle, Vec2 center, int scale) {
 
     triangle->vertex3.x = center.x + (triangle->scale / 2);
     triangle->vertex3.y = center.y + (triangle->scale / 2); 
-   
+  
+    Vec2 *vertex1 = &triangle->vertex1;
+    Vec2 *vertex2 = &triangle->vertex2;
+    Vec2 *vertex3 = &triangle->vertex3;
+    
+    vec2_rotate(vertex1, angle);
+    vec2_rotate(vertex2, angle);
+    vec2_rotate(vertex3, angle);
+
     // We then convert the x's and y's of the vertices into SDL's
     // preferred structure of choice
     SDL_Point point1 = {triangle->vertex1.x, triangle->vertex1.y}; 
@@ -82,8 +92,9 @@ int main(int argc, char* argv[]) {
     
     Vec2 center = {200, 200};
     Vec2 new_center;
-    int scale = 250;
-    update_triangle(p_triangle, center, scale);
+    int scale = 75;
+    int angle = 60;
+    update_triangle(p_triangle, center, scale, -1);
 
     SDL_Init(SDL_INIT_VIDEO);
     SDL_Window *window;
@@ -91,7 +102,6 @@ int main(int argc, char* argv[]) {
     int posX = 100, posY = 100; 
     window = SDL_CreateWindow("Vector Example", posX, posY, SCREEN_HEIGHT,SCREEN_WIDTH,  0);
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-
 
     SDL_bool done = SDL_FALSE;
 
@@ -105,6 +115,7 @@ int main(int argc, char* argv[]) {
         SDL_RenderDrawLines(renderer, triangle.points, triangle.point_count);
         SDL_RenderPresent(renderer);
 
+        /*
         // If the triangle has arrived at the random spot it travelled
         // to, give it another one.
         if (p_triangle->center.y == new_center.y && p_triangle->center.x == new_center.x)
@@ -125,8 +136,8 @@ int main(int argc, char* argv[]) {
             if (p_triangle->center.y > new_center.y)
                 center.y -= 0.25;
 
-        }
-        update_triangle(p_triangle, center, scale);
+        }*/
+        //update_triangle(p_triangle, center, scale, angle);
 
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_QUIT) {
