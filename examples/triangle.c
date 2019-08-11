@@ -4,8 +4,8 @@
 #include <time.h>
 
 #define POINTS_COUNT 4
-#define SCREEN_HEIGHT 1366
-#define SCREEN_WIDTH  768
+#define SCREEN_HEIGHT 640 
+#define SCREEN_WIDTH  480 
 #define TRUE 0
 #define FALSE 1
 
@@ -82,7 +82,7 @@ int main(int argc, char* argv[]) {
     
     Vec2 center = {200, 200};
     Vec2 new_center;
-    int scale = 250;
+    int scale = 100;
     update_triangle(p_triangle, center, scale);
 
     SDL_Init(SDL_INIT_VIDEO);
